@@ -10,7 +10,7 @@ public class Receipt
         System.out.println("Welcome to my store! I sell breakfast items.");
         System.out.println("Please type the quantity that you want of an item"); 
         System.out.println();
-        
+
         System.out.print("Coffee (2.99 per cup):");
         double coffee = input.nextInt() * 2.99;
 
@@ -109,6 +109,10 @@ public class Receipt
                 System.out.println("******************************" + eggs);
             }
         }
+
+        System.out.println("****************************************");
+
+        input.close();
     }
 
 }
