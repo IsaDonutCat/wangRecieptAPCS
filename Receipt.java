@@ -11,40 +11,48 @@ public class Receipt
         System.out.println("Please type the quantity that you want of an item"); 
         System.out.println();
 
-        System.out.print("Coffee (2.99 per cup) - MAX 9:");
+        System.out.print("Coffee (2.99 per cup):");
         double cof = input.nextInt() * 2.99;
         int COF = (int) cof;
-        total = String.valueOf(COF);
+        String coffee = String.valueOf(COF);
 
-        System.out.print("Bacon (0.99 per bacon slice - MAX 9): ");
+        System.out.print("Bacon (0.99 per bacon slice): ");
         double bac = input.nextInt() * 0.99; 
-        int COF = (int) cof;
-        String bacon = String.valueOf(bac);
+        int BAC = (int) bac;
+        String bacon = String.valueOf(BAC);
 
-        System.out.print("Waffles (3.99 for two - MAX 9): ");
+        System.out.print("Waffles (3.99 for two): ");
         double waf = input.nextInt() * 3.99;
-        String waffles = String.valueOf(waf);
+        int WAF = (int) waf;
+        String waffles = String.valueOf(WAF);
 
-        System.out.print("Cereal (1.99 per cup - MAX 9): ");
+        System.out.print("Cereal (1.99 per cup): ");
         double cer = input.nextInt() * 1.99;
-        String cereal = String.valueOf(cer);
+        int CER = (int) cer;
+        String cereal = String.valueOf(CER);
 
-        System.out.print("Fruit (1.99 per cup - MAX 9):");
+        System.out.print("Fruit (1.99 per cup):");
         double fru = input.nextInt() * 1.99;
-        String fruit = String.valueOf(fru);
+        int FRU = (int) fru;
+        String fruit = String.valueOf(FRU);
 
-        System.out.print("Omelets (1.99 per two eggs - MAX 9):");
+        System.out.print("Omelets (1.99 per two eggs):");
         double eggy = input.nextInt() * 1.99;
-        String eggs = String.valueOf(eggy);
+        int EGGY = (int) eggy;
+        String eggs = String.valueOf(EGGY);
 
         //print receipt time
+        System.out.println();
+        System.out.println();
+
         System.out.println("****************************************");
         System.out.println("ITEMS                              PRICE");
-
+        System.out.println();
+        
         if (cof != 0)
         {   
             System.out.print("COFFEE");
-            for (int i = 0; i < (34 - coffee.length()); i++)
+            for (int i = 0; i < (31 - coffee.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -54,7 +62,7 @@ public class Receipt
         if (bac != 0)
         {
             System.out.print("BACON");
-            for (int i = 0; i < (35 - bacon.length()); i++)
+            for (int i = 0; i < (32 - bacon.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -64,7 +72,7 @@ public class Receipt
         if (waf != 0)
         {
             System.out.print("WAFFLES");
-            for (int i = 0; i < (28); i++)
+            for (int i = 0; i < (30 - waffles.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -74,7 +82,7 @@ public class Receipt
         if (cer != 0)
         {
            System.out.print("CEREAL");
-            for (int i = 0; i < (34 - cereal.length()); i++)
+            for (int i = 0; i < (31 - cereal.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -84,7 +92,7 @@ public class Receipt
         if (fru != 0)
         {
             System.out.print("FRUIT");
-            for (int i = 0; i < (35 - fruit.length()); i++)
+            for (int i = 0; i < (32 - fruit.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -94,7 +102,7 @@ public class Receipt
         if (eggy != 0)
         {
             System.out.print("EGGS");
-            for (int i = 0; i < (36 - eggs.length()); i++)
+            for (int i = 0; i < (33 - eggs.length()); i++)
             {
                 System.out.print(" ");
             }
