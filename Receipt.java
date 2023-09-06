@@ -40,23 +40,43 @@ public class Receipt
         System.out.println("ITEMS                              PRICE");
 
         if (cof != 0)
-        {
-            
+        {   
+            System.out.print("COFFEE");
+            for (int i = 0; i < (34 - coffee.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", cof));
         }
 
         if (bac != 0)
         {
-            
+            System.out.print("BACON");
+            for (int i = 0; i < (35 - bacon.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", bac));
         }
 
         if (waf != 0)
         {
-            
+            System.out.print("WAFFLES");
+            for (int i = 0; i < (33 - waffles.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", waf));
         }
 
         if (cer != 0)
         {
-           
+           System.out.print("CEREAL");
+            for (int i = 0; i < (33 - cereal.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", cer));
         }
 
         if (fru != 0)
@@ -68,12 +88,14 @@ public class Receipt
         {
             
         }
-        double total = eggy + fru + cof + bac + waf + cer;
+
+        double tot = eggy + fru + cof + bac + waf + cer;
+        String total = String.valueOf(tot);
 
         System.out.println("                      Subtotal: " + total);
         System.out.println("                      Total: " + (total * 1.025));
         System.out.println();
-        System.out.println("THANK YOU FOR SHOPPING WITH US");
+        System.out.println("     THANK YOU FOR SHOPPING WITH US     ");
         System.out.println("****************************************");
 
         input.close();
