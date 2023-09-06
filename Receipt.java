@@ -19,8 +19,8 @@ public class Receipt
         double bac = input.nextInt() * 0.99;
         String bacon = String.valueOf(bac);
 
-        System.out.print("Waffles (2.99 for two): ");
-        double waf = input.nextInt() * 2.99;
+        System.out.print("Waffles (3.99 for two): ");
+        double waf = input.nextInt() * 3.99;
         String waffles = String.valueOf(waf);
 
         System.out.print("Cereal (1.99 per cup): ");
@@ -62,7 +62,7 @@ public class Receipt
         if (waf != 0)
         {
             System.out.print("WAFFLES");
-            for (int i = 0; i < (33 - waffles.length()); i++)
+            for (int i = 0; i < (28); i++)
             {
                 System.out.print(" ");
             }
@@ -72,7 +72,7 @@ public class Receipt
         if (cer != 0)
         {
            System.out.print("CEREAL");
-            for (int i = 0; i < (33 - cereal.length()); i++)
+            for (int i = 0; i < (34 - cereal.length()); i++)
             {
                 System.out.print(" ");
             }
@@ -81,19 +81,47 @@ public class Receipt
 
         if (fru != 0)
         {
-            
+            System.out.print("FRUIT");
+            for (int i = 0; i < (35 - fruit.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", fru));
         }
 
         if (eggy != 0)
         {
-            
+            System.out.print("EGGS");
+            for (int i = 0; i < (36 - eggs.length()); i++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(String.format("%.2f", eggy));
         }
+
+        System.out.println("****************************************");
 
         double tot = eggy + fru + cof + bac + waf + cer;
         String total = String.valueOf(tot);
 
-        System.out.println("                      Subtotal: " + total);
-        System.out.println("                      Total: " + (total * 1.025));
+        System.out.print("SUBTOTAL:");
+        for (int i = 0; i < 26; i++)
+        {
+            System.out.print(" ");
+        }
+        System.out.println(String.format("%.2f", tot));
+        
+        tot *= 1.025;
+        total = String.valueOf(tot);
+        total = total.substring(0, 4);
+
+        System.out.print("TOTAL:");
+        for (int i = 0; i < (33 - total.length()); i++)
+        {
+            System.out.print(" ");
+        }
+        System.out.println(String.format("%.2f", tot));
+
         System.out.println();
         System.out.println("     THANK YOU FOR SHOPPING WITH US     ");
         System.out.println("****************************************");
