@@ -12,104 +12,68 @@ public class Receipt
         System.out.println();
 
         System.out.print("Coffee (2.99 per cup):");
-        double coffee = input.nextInt() * 2.99;
+        double cof = input.nextInt() * 2.99;
+        String coffee = String.valueOf(cof);
 
         System.out.print("Bacon (0.99 per bacon slice): ");
-        double bacon = input.nextInt() * 0.99;
+        double bac = input.nextInt() * 0.99;
+        String bacon = String.valueOf(bac);
 
         System.out.print("Waffles (2.99 for two): ");
-        double waffles = input.nextInt() * 2.99;
+        double waf = input.nextInt() * 2.99;
+        String waffles = String.valueOf(waf);
 
         System.out.print("Cereal (1.99 per cup): ");
-        double cereal = input.nextInt() * 1.99;
+        double cer = input.nextInt() * 1.99;
+        String cereal = String.valueOf(cer);
 
         System.out.print("Fruit (1.99 per cup):");
-        double fruit = input.nextInt() * 1.99;
+        double fru = input.nextInt() * 1.99;
+        String fruit = String.valueOf(fru);
 
         System.out.print("Omelets (1.99 per two eggs):");
-        double eggs = input.nextInt() * 1.99;
+        double eggy = input.nextInt() * 1.99;
+        String eggs = String.valueOf(eggy);
 
+        //print receipt time
         System.out.println("****************************************");
         System.out.println("ITEMS                              PRICE");
 
-        if (coffee != 0)
+        if (cof != 0)
         {
-            System.out.print("COFFEE");
-            if (coffee > 9.99)
-            {
-                System.out.println("*****************************" + coffee);
-            }
-            else
-            {
-                System.out.println("******************************" + coffee);
-            }
+            
         }
 
-        if (bacon != 0)
+        if (bac != 0)
         {
-            System.out.print("BACON");
-            if (bacon > 9.99)
-            {
-                System.out.println("******************************" + bacon);
-            }
-            else
-            {
-                System.out.println("*******************************" + bacon);
-            }
+            
         }
 
-        if (waffles != 0)
+        if (waf != 0)
         {
-            System.out.print("WAFFLES");
-            if (waffles > 9.99)
-            {
-                System.out.println("****************************" + waffles);
-            }
-            else
-            {
-                System.out.println("*****************************" + waffles);
-            }
+            
         }
 
-        if (cereal != 0)
+        if (cer != 0)
         {
-            System.out.print("CEREAL");
-            if (cereal > 9.99)
-            {
-                System.out.println("*****************************" + cereal);
-            }
-            else
-            {
-                System.out.println("******************************" + cereal);
-            }
+           
         }
 
-        if (fruit != 0)
+        if (fru != 0)
         {
-            System.out.print("FRUIT");
-            if (fruit > 9.99)
-            {
-                System.out.println("******************************" + fruit);
-            }
-            else
-            {
-                System.out.println("*******************************" + fruit);
-            }
+            
         }
 
-        if (eggs != 0)
+        if (eggy != 0)
         {
-            System.out.print("OMELET");
-            if (eggs > 9.99)
-            {
-                System.out.println("*****************************" + eggs);
-            }
-            else
-            {
-                System.out.println("******************************" + eggs);
-            }
+            
         }
+        double total = eggy + fru + cof + bac + waf + cer;
 
+        System.out.println("                      Subtotal: " + total);
+        System.out.println("                      Total: " + (total * 1.025));
+        System.out.println();
+        System.out.println("THANK YOU FOR SHOPPING WITH US");
         System.out.println("****************************************");
 
         input.close();
