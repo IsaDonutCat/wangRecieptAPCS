@@ -1,1 +1,1 @@
-# wangRecieptAPCS
+# wangRecieptAPCS - breakfast store receipt
